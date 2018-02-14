@@ -59,8 +59,7 @@
       </main>
       <!-- End Main -->
 
-
-  </div>
+</div>
   <!-- End Enclosing Div -->
 </template>
 

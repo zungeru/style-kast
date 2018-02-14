@@ -10,4 +10,4 @@ export const routes = [
   {path: '/kast', component: Kast, name: 'kast'},
   {path: '/search', component: Search, name: 'search'},
   {path: '/profile', component: Profile, name: 'profile'}
-];
+]
