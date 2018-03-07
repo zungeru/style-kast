@@ -1,5 +1,8 @@
 <template>
-  <h1>Favorites View</h1>
+  <div>
+    <h1>Favorites View</h1>
+  </div>
+
 </template>
 
 <script>

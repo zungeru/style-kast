@@ -2,7 +2,7 @@
   <!-- Start Enclosing Div -->
   <div id="app" class="demo-layout mdl-layout mdl-js-layout mdl-layout--drawer mdl-layout--fixed-header">
     <!-- Start Header -->
-      <header class="demo-header mdl-layout__header mdl-color--black mdl-color-text--white">
+      <header class="demo-header mdl-layout__header mdl-color--white mdl-color-text--black">
         <div class="mdl-layout__header-row">
           <span class="mdl-layout-title">StyleKast</span>
           <div class="mdl-layout-spacer"></div>
@@ -31,40 +31,50 @@
           </div>
         </header>
 
-        <nav class="demo-navigation mdl-navigation mdl-color--black mdl-color-text--white">
-          <a class="mdl-navigation__link" href=""><i class="material-icons" role="presentation">home</i>Home</a>
-          <a class="mdl-navigation__link" href=""><i class="material-icons" role="presentation">loyalty</i>Favorites</a>
-          <a class="mdl-navigation__link" href=""><i class="material-icons" role="presentation">record_voice_over</i>Kast</a>
-          <a class="mdl-navigation__link" href=""><i class="material-icons" role="presentation">search</i>Search</a>
-          <a class="mdl-navigation__link" href=""><i class="material-icons" role="presentation">person</i>Profile</a>
+        <nav class="demo-navigation mdl-navigation mdl-color--white mdl-color-text--black">
+          <router-link to="/" class="mdl-navigation__link"><i class="material-icons" role="presentation">home</i>Home</router-link>
+          <router-link to="/favs" class="mdl-navigation__link"><i class="material-icons" role="presentation">loyalty</i>Favorites</router-link>
+          <router-link to="/kast" class="mdl-navigation__link"><i class="material-icons" role="presentation">record_voice_over</i>Kast</router-link>
+          <router-link to="/search" class="mdl-navigation__link"><i class="material-icons" role="presentation">search</i>Search</router-link>
+          <router-link to="/profile" class="mdl-navigation__link"><i class="material-icons" role="presentation">person</i>Profile</router-link>
         </nav>
 
       </div>
       <!-- End Drawer -->
 
       <!-- Start Main -->
-      <main class="mdl-layout__content mdl-color--grey-100">
+      <main class="mdl-layout__content mdl-color--white">
         <div class="mdl-grid demo-content">
           <router-view></router-view>
         </div>
 
         <section class="social-icons">
-          <div class="mobnav"><a href=""><i class="material-icons mdl-color-text--white" >home</i></a></div>
-          <div class="mobnav"><a href=""><i class="material-icons mdl-color-text--white">loyalty</i></a></div>
-          <div class="mobnav"><a href=""><i class="material-icons mdl-color-text--white">record_voice_over</i></a></div>
-          <div class="mobnav"><a href=""><i class="material-icons mdl-color-text--white">search</i></a></div>
-          <div class="mobnav"><a href=""><i class="material-icons mdl-color-text--white">person</i></a></div>
+          <router-link to="/" class="mobnav" tag="div"><a href=""><i class="material-icons mdl-color-text--black">home</i></a></router-link>
+          <router-link to="/favs" class="mobnav" tag="div"><a href=""><i class="material-icons mdl-color-text--black">loyalty</i></a></router-link>
+          <router-link to="/kast" class="mobnav" tag="div"><a href=""><i class="material-icons mdl-color-text--black">record_voice_over</i></a></router-link>
+          <router-link to="/search" class="mobnav" tag="div"><a href=""><i class="material-icons mdl-color-text--black">search</i></a></router-link>
+          <router-link to="/profile" class="mobnav" tag="div"><a href=""><i class="material-icons mdl-color-text--black">person</i></a></router-link>
         </section>
 
       </main>
       <!-- End Main -->
-
 </div>
   <!-- End Enclosing Div -->
+
 </template>
 
 <script>
 require('material-design-lite')
+
+function close () {
+  var d = document.querySelector('.mdl-layout')
+  d.MaterialLayout.toggleDrawer()
+}
+
+window.onload = function () {
+  document.querySelector('.mdl-layout__drawer').addEventListener('click', close)
+}
+
 export default {
   name: 'App'
 }
@@ -109,7 +119,7 @@ export default {
   /* color: rgba(0, 0, 0, 0.54); */
   /* Changed the above so that the memu bar shows in white again */
   /* color: rgba(0, 0, 0.54, 0.54); This was not working with Firefox so changed it to white*/
-  color: white;
+  color: black;
 }
 
 .header_menu {
@@ -143,17 +153,20 @@ export default {
   flex-direction: row;
   align-items: center;
   /* color: rgba(255, 255, 255, 0.56); */
-  color: rgba(255, 255, 255, 1);
+  /*color: rgba(255, 255, 255, 1);*/
+  color: black;
   font-weight: 500;
 }
 .demo-layout .demo-navigation .mdl-navigation__link:hover {
   background-color: #f50057;
   color: #FFFFFF;
 }
+
 .demo-navigation .mdl-navigation__link .material-icons {
   font-size: 24px;
   /* color: rgba(255, 255, 255, 0.56); */
-  color: rgba(255, 255, 255, 1);
+  /*color: rgba(255, 255, 255, 1);*/
+  color: black;
   margin-right: 32px;
 }
 
@@ -163,14 +176,15 @@ export default {
 }
 
 .social-icons {
-      background-color: black;
+      background-color: white;
       position: fixed;
       bottom: 0%;
       height: 40px;
       width: 100%;
+      display: none;
     }
 
-    .mobnav {
+.mobnav {
       position: relative;  /* 1 */
       width: 18.5%;
       height: 35px;
@@ -178,19 +192,44 @@ export default {
       text-align: center;
     }
 
-    div.mobnav i {
+div.mobnav i {
       margin: 0;
       position: absolute;  /* 2 */
       top: 50%;            /* 3 */
       transform: translate(0, -50%); /* 4 */
     }
 
-    div.mobnav a:hover i {
+div.mobnav a:hover i {
       color: #f50057 !important;
     }
 
-    /* not working */
-    div.mobnav a:active i {
+@media (max-width: 580px) {
+      /* make title smaller to fit on screen */
+      .mdl-layout-title {
+          font-size: 18px;
+        }
+
+      .social-icons {
+        display: block;
+      }
+
+      .mdl-layout .mdl-layout__drawer-button {
+        display: none;
+      }
+
+      .mdl-layout__header-row {
+        padding: 15px;
+      }
+  }
+/* .mdl-layout .mdl-layout__drawer-button {
+  display: none;
+}
+
+.mdl-layout__header-row {
+  padding: 10px;
+} */
+/* not working */
+div.mobnav a:active i {
       color: #f50057 !important;
     }
 </style>
