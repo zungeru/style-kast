@@ -49,11 +49,11 @@
         </div>
 
         <section class="social-icons">
-          <router-link to="/" class="mobnav" tag="div"><a href=""><i class="material-icons mdl-color-text--black">home</i></a></router-link>
-          <router-link to="/favs" class="mobnav" tag="div"><a href=""><i class="material-icons mdl-color-text--black">loyalty</i></a></router-link>
-          <router-link to="/kast" class="mobnav" tag="div"><a href=""><i class="material-icons mdl-color-text--black">record_voice_over</i></a></router-link>
-          <router-link to="/search" class="mobnav" tag="div"><a href=""><i class="material-icons mdl-color-text--black">search</i></a></router-link>
-          <router-link to="/profile" class="mobnav" tag="div"><a href=""><i class="material-icons mdl-color-text--black">person</i></a></router-link>
+          <router-link to="/" class="mobnav" tag="div"><a><i class="material-icons mdl-color-text--black">home</i></a></router-link>
+          <router-link to="/favs" class="mobnav" tag="div"><a><i class="material-icons mdl-color-text--black">loyalty</i></a></router-link>
+          <router-link to="/kast" class="mobnav" tag="div"><a><i class="material-icons mdl-color-text--black">record_voice_over</i></a></router-link>
+          <router-link to="/search" class="mobnav" tag="div"><a><i class="material-icons mdl-color-text--black">search</i></a></router-link>
+          <router-link to="/profile" class="mobnav" tag="div"><a><i class="material-icons mdl-color-text--black">person</i></a></router-link>
         </section>
 
       </main>
@@ -172,7 +172,6 @@ export default {
 
 .demo-content {
   max-width: 920px;
-  border: 2px solid black;
 }
 
 .social-icons {
