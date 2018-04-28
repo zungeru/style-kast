@@ -44,21 +44,21 @@
 
       <!-- Start Main -->
       <main class="mdl-layout__content mdl-color--white">
-        <div class="mdl-grid demo-content">
+        <!-- <div class="mdl-grid demo-content"> -->
           <router-view></router-view>
-        </div>
-
-        <section class="social-icons">
+        <!-- </div> -->
+      </main>
+      <footer class="mdl-mini-footer">
+        <div class="social-icons">
           <router-link to="/" class="mobnav" tag="div"><a><i class="material-icons mdl-color-text--black">home</i></a></router-link>
           <router-link to="/favs" class="mobnav" tag="div"><a><i class="material-icons mdl-color-text--black">loyalty</i></a></router-link>
           <router-link to="/kast" class="mobnav" tag="div"><a><i class="material-icons mdl-color-text--black">record_voice_over</i></a></router-link>
           <router-link to="/search" class="mobnav" tag="div"><a><i class="material-icons mdl-color-text--black">search</i></a></router-link>
           <router-link to="/profile" class="mobnav" tag="div"><a><i class="material-icons mdl-color-text--black">person</i></a></router-link>
-        </section>
-
-      </main>
+        </div>  
+      </footer>
       <!-- End Main -->
-</div>
+  </div>
   <!-- End Enclosing Div -->
 
 </template>
@@ -83,6 +83,7 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://code.getmdl.io/1.3.0/material.pink-blue.min.css');
+/* @import url('https://fonts.googleapis.com/css?family=Lato'); */
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -170,18 +171,17 @@ export default {
   margin-right: 32px;
 }
 
-.demo-content {
+/* .demo-content {
   max-width: 920px;
-}
+} */
 
 .social-icons {
-      background-color: white;
-      position: fixed;
-      bottom: 0%;
-      height: 40px;
-      width: 100%;
-      display: none;
-    }
+  background-color: white;
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  display: none;
+}
 
 .mobnav {
       position: relative;  /* 1 */
