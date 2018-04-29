@@ -55,7 +55,7 @@
           <router-link to="/kast" class="mobnav" tag="div"><a><i class="material-icons mdl-color-text--black">record_voice_over</i></a></router-link>
           <router-link to="/search" class="mobnav" tag="div"><a><i class="material-icons mdl-color-text--black">search</i></a></router-link>
           <router-link to="/profile" class="mobnav" tag="div"><a><i class="material-icons mdl-color-text--black">person</i></a></router-link>
-        </div>  
+        </div>
       </footer>
       <!-- End Main -->
   </div>
@@ -174,13 +174,18 @@ export default {
 /* .demo-content {
   max-width: 920px;
 } */
+.mdl-mini-footer{
+  background-color: gray;
+  padding-left: 0px;
+  padding-top: 10px;
+  display: none;
+}
 
 .social-icons {
   background-color: white;
   position: fixed;
   bottom: 0%;
   width: 100%;
-  display: none;
 }
 
 .mobnav {
@@ -208,10 +213,9 @@ div.mobnav a:hover i {
           font-size: 18px;
         }
 
-      .social-icons {
+      .mdl-mini-footer{
         display: block;
       }
-
       .mdl-layout .mdl-layout__drawer-button {
         display: none;
       }
@@ -220,13 +224,7 @@ div.mobnav a:hover i {
         padding: 15px;
       }
   }
-/* .mdl-layout .mdl-layout__drawer-button {
-  display: none;
-}
 
-.mdl-layout__header-row {
-  padding: 10px;
-} */
 /* not working */
 div.mobnav a:active i {
       color: #f50057 !important;
