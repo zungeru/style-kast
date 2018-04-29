@@ -32,11 +32,11 @@
         </header>
 
         <nav class="demo-navigation mdl-navigation mdl-color--white mdl-color-text--black">
-          <router-link to="/" class="mdl-navigation__link"><i class="material-icons" role="presentation">home</i>Home</router-link>
-          <router-link to="/favs" class="mdl-navigation__link"><i class="material-icons" role="presentation">loyalty</i>Favorites</router-link>
-          <router-link to="/kast" class="mdl-navigation__link"><i class="material-icons" role="presentation">record_voice_over</i>Kast</router-link>
-          <router-link to="/search" class="mdl-navigation__link"><i class="material-icons" role="presentation">search</i>Search</router-link>
-          <router-link to="/profile" class="mdl-navigation__link"><i class="material-icons" role="presentation">person</i>Profile</router-link>
+          <router-link to="/" exact class="mdl-navigation__link"><i class="material-icons" role="presentation">home</i>Home</router-link>
+          <router-link to="/favs" exact class="mdl-navigation__link"><i class="material-icons" role="presentation">loyalty</i>Favorites</router-link>
+          <router-link to="/kast" exact class="mdl-navigation__link"><i class="material-icons" role="presentation">record_voice_over</i>Kast</router-link>
+          <router-link to="/search" exact class="mdl-navigation__link"><i class="material-icons" role="presentation">search</i>Search</router-link>
+          <router-link to="/profile" exact class="mdl-navigation__link"><i class="material-icons" role="presentation">person</i>Profile</router-link>
         </nav>
 
       </div>
@@ -50,11 +50,11 @@
       </main>
       <footer class="mdl-mini-footer">
         <div class="social-icons">
-          <router-link to="/" class="mobnav" tag="div"><a><i class="material-icons mdl-color-text--black">home</i></a></router-link>
-          <router-link to="/favs" class="mobnav" tag="div"><a><i class="material-icons mdl-color-text--black">loyalty</i></a></router-link>
-          <router-link to="/kast" class="mobnav" tag="div"><a><i class="material-icons mdl-color-text--black">record_voice_over</i></a></router-link>
-          <router-link to="/search" class="mobnav" tag="div"><a><i class="material-icons mdl-color-text--black">search</i></a></router-link>
-          <router-link to="/profile" class="mobnav" tag="div"><a><i class="material-icons mdl-color-text--black">person</i></a></router-link>
+          <router-link to="/" class="mobnav"><a><i class="material-icons mdl-color-text--black">home</i></a></router-link>
+          <router-link to="/favs" class="mobnav"><a><i class="material-icons mdl-color-text--black">loyalty</i></a></router-link>
+          <router-link to="/kast" class="mobnav"><a><i class="material-icons mdl-color-text--black">record_voice_over</i></a></router-link>
+          <router-link to="/search" class="mobnav"><a><i class="material-icons mdl-color-text--black">search</i></a></router-link>
+          <router-link to="/profile" class="mobnav"><a><i class="material-icons mdl-color-text--black">person</i></a></router-link>
         </div>
       </footer>
       <!-- End Main -->
@@ -196,16 +196,25 @@ export default {
       text-align: center;
     }
 
-div.mobnav i {
+.mobnav i {
       margin: 0;
       position: absolute;  /* 2 */
       top: 50%;            /* 3 */
       transform: translate(0, -50%); /* 4 */
     }
 
-div.mobnav a:hover i {
+.mobnav a:hover i {
       color: #f50057 !important;
     }
+
+/* not working */
+.mobnav a:active i {
+      color: #f50057 !important;
+    }
+
+.router-link-active {
+  color: #f50057 !important;
+}
 
 @media (max-width: 580px) {
       /* make title smaller to fit on screen */
@@ -224,9 +233,4 @@ div.mobnav a:hover i {
         padding: 15px;
       }
   }
-
-/* not working */
-div.mobnav a:active i {
-      color: #f50057 !important;
-    }
 </style>
