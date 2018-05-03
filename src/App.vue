@@ -32,11 +32,11 @@
         </header>
 
         <nav class="demo-navigation mdl-navigation mdl-color--white mdl-color-text--black">
-          <router-link to="/" exact class="mdl-navigation__link"><i class="material-icons" role="presentation">home</i>Home</router-link>
-          <router-link to="/favs" exact class="mdl-navigation__link"><i class="material-icons" role="presentation">loyalty</i>Favorites</router-link>
-          <router-link to="/kast" exact class="mdl-navigation__link"><i class="material-icons" role="presentation">record_voice_over</i>Kast</router-link>
-          <router-link to="/search" exact class="mdl-navigation__link"><i class="material-icons" role="presentation">search</i>Search</router-link>
-          <router-link to="/profile" exact class="mdl-navigation__link"><i class="material-icons" role="presentation">person</i>Profile</router-link>
+          <router-link to="/feed" class="mdl-navigation__link"><i class="material-icons" role="presentation">home</i>Home</router-link>
+          <router-link to="/favs" class="mdl-navigation__link"><i class="material-icons" role="presentation">loyalty</i>Favorites</router-link>
+          <router-link to="/kast" class="mdl-navigation__link"><i class="material-icons" role="presentation">record_voice_over</i>Kast</router-link>
+          <router-link to="/search" class="mdl-navigation__link"><i class="material-icons" role="presentation">search</i>Search</router-link>
+          <router-link to="/profile" class="mdl-navigation__link"><i class="material-icons" role="presentation">person</i>Profile</router-link>
         </nav>
 
       </div>
@@ -54,7 +54,7 @@
       <!-- Start Footer -->
       <footer class="mdl-mini-footer">
         <div class="social-icons">
-          <router-link to="/" exact class="mobnav">
+          <router-link to="/feed" class="mobnav">
               <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
                   <path d="M0 0h24v24H0z" fill="none"/>
