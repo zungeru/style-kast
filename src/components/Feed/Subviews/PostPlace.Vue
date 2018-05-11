@@ -1,6 +1,6 @@
 <template>
   <div>
-    Post Place Goes Here
+    <h1>Post Place Goes Here</h1>
   </div>
 </template>
 

@@ -1,11 +1,12 @@
 <template>
 <div>
-  <router-view></router-view>
   <StyleKard
     v-for="(post,index) in posts"
     :key="index"
     :post="post">
   </StyleKard>
+
+  <router-view></router-view>
 </div>
 </template>
 
