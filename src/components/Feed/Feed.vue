@@ -6,7 +6,6 @@
     :post="post">
   </StyleKard>
 
-  <router-view></router-view>
 </div>
 </template>
 
