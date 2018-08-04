@@ -1,8 +1,8 @@
 <template>
   <!-- Start Enclosing Div -->
-  <div id="app" class="demo-layout mdl-layout mdl-js-layout mdl-layout--drawer mdl-layout--fixed-header">
+  <div id="app" class="sk-layout mdl-layout mdl-js-layout mdl-layout--drawer mdl-layout--fixed-header">
     <!-- Start Header -->
-      <header class="demo-header mdl-layout__header mdl-color--white mdl-color-text--black">
+      <header class="sk-header mdl-layout__header mdl-color--white mdl-color-text--black">
         <div class="mdl-layout__header-row">
           <span class="mdl-layout-title">StyleKast</span>
           <div class="mdl-layout-spacer"></div>
@@ -19,8 +19,8 @@
       <!-- End Header -->
 
       <!-- Start Drawer -->
-      <div class="demo-drawer mdl-layout__drawer mdl-color--white mdl-color-text--pink-A400">
-        <header class="demo-drawer-header">
+      <div class="sk-drawer mdl-layout__drawer mdl-color--white mdl-color-text--pink-A400">
+        <header class="sk-drawer-header">
           <div class="avatar-container">
             <div class="image"></div>
           </div>
@@ -31,7 +31,7 @@
           </div>
         </header>
 
-        <nav class="demo-navigation mdl-navigation mdl-color--white mdl-color-text--black">
+        <nav class="sk-navigation mdl-navigation mdl-color--white mdl-color-text--black">
           <router-link to="/feed" class="mdl-navigation__link"><i class="material-icons" role="presentation">style</i>Style Feed</router-link>
           <router-link to="/favs" class="mdl-navigation__link"><i class="material-icons" role="presentation">loyalty</i>Favorites</router-link>
           <router-link to="/kast" class="mdl-navigation__link"><i class="material-icons" role="presentation">record_voice_over</i>Kast</router-link>
@@ -45,7 +45,7 @@
       <!-- Start Main -->
       <main class="mdl-layout__content mdl-color--white">
         <!-- #TODO Need Use Appropriate Grid For Each Top Level Component...Home/Kast/Favorites/Search/Profile-->
-        <!-- <div class="mdl-grid demo-content"> -->
+        <!-- <div class="mdl-grid sk-content"> -->
           <router-view></router-view>
         <!-- </div> -->
       </main>
@@ -150,7 +150,7 @@ export default {
      font-weight: 500;
  }
 
-.demo-layout .mdl-layout__header .mdl-layout__drawer-button {
+.sk-layout .mdl-layout__header .mdl-layout__drawer-button {
   /* color: rgba(0, 0, 0, 0.54); */
   /* Changed the above so that the memu bar shows in white again */
   /* color: rgba(0, 0, 0.54, 0.54); This was not working with Firefox so changed it to white*/
@@ -164,29 +164,29 @@ export default {
 .mdl-layout__drawer .avatar {
   margin-bottom: 16px;
 }
-.demo-drawer {
+.sk-drawer {
   border: none;
 }
 
 /* iOS Safari specific workaround */
-.demo-drawer .mdl-menu__container {
+.sk-drawer .mdl-menu__container {
   z-index: -1;
 }
-.demo-drawer .demo-navigation {
+.sk-drawer .sk-navigation {
   z-index: -2;
 }
 /* END iOS Safari specific workaround */
 
-.demo-drawer .mdl-menu .mdl-menu__item {
+.sk-drawer .mdl-menu .mdl-menu__item {
   display: flex;
   align-items: center;
 }
 
-.demo-navigation {
+.sk-navigation {
   flex-grow: 1;
 }
 
-.demo-layout .demo-navigation .mdl-navigation__link {
+.sk-layout .sk-navigation .mdl-navigation__link {
   display: flex !important;
   flex-direction: row;
   align-items: center;
@@ -196,12 +196,12 @@ export default {
   font-weight: 500;
 }
 
-.demo-layout .demo-navigation .mdl-navigation__link:hover {
+.sk-layout .sk-navigation .mdl-navigation__link:hover {
   background-color: #f50057;
   color: #FFFFFF;
 }
 
-.demo-navigation .mdl-navigation__link .material-icons {
+.sk-navigation .mdl-navigation__link .material-icons {
   font-size: 24px;
   /* color: rgba(255, 255, 255, 0.56); */
   /*color: rgba(255, 255, 255, 1);*/
@@ -209,7 +209,7 @@ export default {
   margin-right: 32px;
 }
 
-/* .demo-content {
+/* .sk-content {
   max-width: 920px; /This is related to the mdl-grid that I commented out above
 } */
 
