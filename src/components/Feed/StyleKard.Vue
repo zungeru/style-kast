@@ -33,6 +33,7 @@
         <!-- Slide Navigation -->
         <div class="navigation">
             <!-- <span v-on:click="goToPrev">Prev</span> -->
+
             <span
               class="nav-number"
               v-for="(pic, index) in post.pics"
@@ -42,6 +43,8 @@
                 <circle cx="5" cy="5" r="4" :fill="[index === currentIndex ? '#f50057': 'black']"/>
               </svg>
             </span>
+            <br>
+            <span style="font-size: 11px;">2 WEEKS AGO</span>
             <!-- <span v-on:click="goToNext">Next</span> -->
         </div>
         <!-- End Slide Navigation -->
@@ -90,12 +93,12 @@
 
     <!-- clear Divs -->
     <div style="clear:both;"></div>
-    <hr style="margin:10px 10px 0px 10px;">
+    <!-- <hr style="margin:10px 10px 0px 10px;"> -->
     <!-- clear Divs -->
 
     <!-- Info Detail -->
     <div class="info-detail">
-      <span style="font-size: 11px;">2 WEEKS AGO</span>
+      <!-- <span style="font-size: 11px;">2 WEEKS AGO</span> -->
       <div v-if="notes">
         {{post.note}}
       </div>
@@ -229,6 +232,7 @@ export default {
   margin-top: 2px;
   margin-left: 10px;
   margin-right: 10px;
+  margin-bottom: 5px;
   justify-content: space-between;
   display: flex;
 }
